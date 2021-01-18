@@ -1,0 +1,14 @@
+*,
+::before,
+::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.landing{
+  min-height: 100vh;
+  background: url("../img/placeholder.jpg");
+  background-size: cover;
+  padding: 0rem 5rem;
+}
