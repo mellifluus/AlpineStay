@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
 *,
 ::before,
 ::after{
@@ -10,6 +12,10 @@ body{
   font-family: 'Quicksand', sans-serif;
 }
 
+.container{
+  position: relative;
+}
+
 .landing{
   min-height: 100vh;
   background: url("../img/placeholder.jpg");
@@ -18,6 +24,32 @@ body{
   text-align: center;
 }
 
-#chartdiv{
+.bivs{
   height: 100vh;
+  width: 40vw;
+  padding: 3rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#mountain{
+  height: 20vh;
+  width: 20vw;
+  margin-bottom: 3rem;
+}
+
+#map{
+  height: 100vh;
+  width: 60vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }

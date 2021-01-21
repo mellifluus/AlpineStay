@@ -5,19 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Map</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
-    <div id='chartdiv'></div>
+    <div class="container">
+        <div id='map'></div>
+        <div class="bivs">
+            <lottie-player id="mountain" src="https://assets1.lottiefiles.com/packages/lf20_1ewtp5zu.json" background="transparent" speed="1.5" loop autoplay></lottie-player>
+            <h2>Click on a location to get started!</h2>
+        </div>
+    </div>
     <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiYWNvbml0dXMiLCJhIjoiY2trNGppencyMDFxNjJubzBwa3ZoMWw3eCJ9.q5TzubW0nKMfw1l0FPkMNw';
-        var map = new mapboxgl.Map({
-        container: 'chartdiv',
-        style: 'mapbox://styles/mapbox/outdoors-v11',
-        center: [12.8, 42],
-        zoom: 5.5
+        var map = L.map('map', {
+            center: [42.550651, 12.105600],
+            zoom: 6.2,
+            maxBounds: [[35.354438, 1.087694], [49.003742, 23.123505]],
+            maxZoom: 11,
+            minZoom: 6.2,
+            attributionControl: false,
+            zoomControl: false,
         });
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            id: 'mapbox/outdoors-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiYWNvbml0dXMiLCJhIjoiY2trNGppencyMDFxNjJubzBwa3ZoMWw3eCJ9.q5TzubW0nKMfw1l0FPkMNw'
+        }).addTo(map);
+
+        // map.on('click', () => {
+        //     console.log(map.getBounds());
+        // })
+        // map.on('dblclick', () => {
+        //     console.log(map.getCenter());
+        // })
+
+        var marker = new L.Marker([42.550651, 12.105600], {id: 'ciao'}).on('click', e => {
+            console.log(marker.options.id);
+        }).addTo(map);
+
     </script>
 </body>
 </html>
