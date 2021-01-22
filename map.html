@@ -15,51 +15,51 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div id='map'></div>
-        <div class="biv-wrapper">
-            <!-- <div class="get-started">
-                <lottie-player id="mountain" src="https://assets1.lottiefiles.com/packages/lf20_1ewtp5zu.json" background="transparent" speed="1.5" loop autoplay></lottie-player>
-                <h2>Click on a location to get started!</h2>
-            </div> -->
-            
-            <div class="biv">
-                <div class="biv-title">
-                    <h2>Malga Flavona</h2>
-                    <h4>Val di Tovel, Trentino Alto-Adige</h4>
+    <div id='map'></div>
+    <div class="biv-wrapper">
+        <!-- <div class="get-started">
+            <lottie-player id="mountain" src="https://assets1.lottiefiles.com/packages/lf20_1ewtp5zu.json" background="transparent" speed="1.5" loop autoplay></lottie-player>
+            <h2>Select a location to get started!</h2>
+        </div> -->
+        
+        <div class="biv">
+            <div class="biv-title">
+                <h1>Malga Flavona</h2>
+                <h3>Val di Tovel, Trentino Alto-Adige</h4>
+            </div>
+            <hr>
+            <h3 class="gallery-title">Photo gallery</h3>
+            <div class="biv-gallery">
+                <div class="cssbox">
+                    <a id="image1" href="#image1">
+                        <img class="biv-thumb" src="https://www.ilovevaldinon.it/wp-content/uploads/2018/07/malga-flavona-marco-formolo-ilovevaldinon3-1024x682.jpg">
+                        <span class="cssbox_full">
+                            <img src="https://www.ilovevaldinon.it/wp-content/uploads/2018/07/malga-flavona-marco-formolo-ilovevaldinon3-1024x682.jpg">
+                        </span>
+                    </a>
+                    <a class="cssbox_close" href="#void"></a>
+                    <a class="cssbox_next" href="#image2">&gt;</a>
                 </div>
-                <div class="biv-gallery">
-                    <div class="cssbox">
-                        <a id="image1" href="#image1">
-                            <img class="biv-thumb" src="https://www.ilovevaldinon.it/wp-content/uploads/2018/07/malga-flavona-marco-formolo-ilovevaldinon3-1024x682.jpg">
-                            <span class="cssbox_full">
-                                <img src="https://www.ilovevaldinon.it/wp-content/uploads/2018/07/malga-flavona-marco-formolo-ilovevaldinon3-1024x682.jpg">
-                            </span>
-                        </a>
-                        <a class="cssbox_close" href="#void"></a>
-                        <a class="cssbox_next" href="#image2">&gt;</a>
-                    </div>
-                      
-                    <div class="cssbox">
-                        <a id="image2" href="#image2">
-                            <span class="cssbox_full">
-                                <img src="https://www.ilovevaldinon.it/wp-content/uploads/2018/07/malga-flavona-marco-formolo-ilovevaldinon3-1024x682.jpg">
-                            </span>
-                        </a>
-                        <a class="cssbox_close" href="#void"></a>
-                        <a class="cssbox_prev" href="#image1">&lt;</a>
-                        <a class="cssbox_next" href="#image3">&gt;</a>
-                    </div>
-                      
-                    <div class="cssbox">
-                        <a id="image3" href="#image3">
-                            <span class="cssbox_full">
-                                <img src="https://www.ilovevaldinon.it/wp-content/uploads/2018/07/malga-flavona-marco-formolo-ilovevaldinon3-1024x682.jpg">
-                            </span>
-                        </a>
-                        <a class="cssbox_close" href="#void"></a>
-                        <a class="cssbox_prev" href="#image2">&lt;</a>
-                    </div>
+                    
+                <div class="cssbox">
+                    <a id="image2" href="#image2">
+                        <span class="cssbox_full">
+                            <img src="https://www.ilovevaldinon.it/wp-content/uploads/2018/07/malga-flavona-marco-formolo-ilovevaldinon3-1024x682.jpg">
+                        </span>
+                    </a>
+                    <a class="cssbox_close" href="#void"></a>
+                    <a class="cssbox_prev" href="#image1">&lt;</a>
+                    <a class="cssbox_next" href="#image3">&gt;</a>
+                </div>
+                    
+                <div class="cssbox">
+                    <a id="image3" href="#image3">
+                        <span class="cssbox_full">
+                            <img src="https://www.ilovevaldinon.it/wp-content/uploads/2018/07/malga-flavona-marco-formolo-ilovevaldinon3-1024x682.jpg">
+                        </span>
+                    </a>
+                    <a class="cssbox_close" href="#void"></a>
+                    <a class="cssbox_prev" href="#image2">&lt;</a>
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
 
         }
 
-        var marker = new L.Marker([42.550651, 12.105600], {id: 'ciao'}).on('click', e => {
+        var marker = new L.Marker([46.225177, 10.930809], {id: 'ciao'}).on('click', e => {
             //console.log(marker.options.id);
             showInfo();
         }).addTo(map);
