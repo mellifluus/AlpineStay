@@ -16,7 +16,7 @@
 </head>
 <body>
     <div id='map'></div>
-    <div class="biv-wrapper">
+    <div class="biv-wrapper no-scrollbar">
         <!-- <div class="get-started">
             <lottie-player id="mountain" src="https://assets1.lottiefiles.com/packages/lf20_1ewtp5zu.json" background="transparent" speed="1.5" loop autoplay></lottie-player>
             <h2>Select a location to get started!</h2>
@@ -28,40 +28,111 @@
                 <h3>Val di Tovel, Trentino Alto-Adige</h4>
             </div>
             <hr>
-            <h3 class="gallery-title">Photo gallery</h3>
             <div class="biv-gallery">
                 <div class="cssbox">
-                    <a id="image1" href="#image1">
-                        <img class="biv-thumb" src="https://www.ilovevaldinon.it/wp-content/uploads/2018/07/malga-flavona-marco-formolo-ilovevaldinon3-1024x682.jpg">
+                    <a id="image0" href="#image0">
+                        <img class="biv-thumb" src="img/0-0.jpg">
                         <span class="cssbox_full">
-                            <img src="https://www.ilovevaldinon.it/wp-content/uploads/2018/07/malga-flavona-marco-formolo-ilovevaldinon3-1024x682.jpg">
+                            <img src="img/0-0.jpg">
                         </span>
                     </a>
                     <a class="cssbox_close" href="#void"></a>
+                    <a class="cssbox_next" href="#image1">&gt;</a>
+                </div>
+                    
+                <div class="cssbox">
+                    <a id="image1" href="#image1">
+                        <span class="cssbox_full">
+                            <img src="img/0-1.jpg">
+                        </span>
+                    </a>
+                    <a class="cssbox_close" href="#void"></a>
+                    <a class="cssbox_prev" href="#image0">&lt;</a>
                     <a class="cssbox_next" href="#image2">&gt;</a>
                 </div>
                     
                 <div class="cssbox">
                     <a id="image2" href="#image2">
                         <span class="cssbox_full">
-                            <img src="https://www.ilovevaldinon.it/wp-content/uploads/2018/07/malga-flavona-marco-formolo-ilovevaldinon3-1024x682.jpg">
+                            <img src="img/0-2.jpg">
                         </span>
                     </a>
                     <a class="cssbox_close" href="#void"></a>
                     <a class="cssbox_prev" href="#image1">&lt;</a>
                     <a class="cssbox_next" href="#image3">&gt;</a>
                 </div>
-                    
+
                 <div class="cssbox">
                     <a id="image3" href="#image3">
                         <span class="cssbox_full">
-                            <img src="https://www.ilovevaldinon.it/wp-content/uploads/2018/07/malga-flavona-marco-formolo-ilovevaldinon3-1024x682.jpg">
+                            <img src="img/0-3.jpg">
                         </span>
                     </a>
                     <a class="cssbox_close" href="#void"></a>
                     <a class="cssbox_prev" href="#image2">&lt;</a>
                 </div>
+
+                <p style="color: gray;"><i>Click on the picture to check user-submitted photos...</i></p>
+            </div>  
+            <hr>
+            <div class="biv-directions">
+                <div class="directions">
+                    <h3>How to reach:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic explicabo nam odio, mollitia ipsa nobis impedit placeat quo, laboriosam veniam facere, quam reiciendis voluptate dolores error ut vero sequi temporibus?</p>
+                    <br>
+                    <span>Time required: </span>
+                    <span><i>~3.5 hrs</i></span>
+                    <br>
+                    <span>Difficulty:</span>
+                    <span style="color: green;">Easy</span>
+                </div>
             </div>
+            <hr>
+            <div class="biv-comments">
+                <div class="comment">
+                    <div class="user">
+                        <img class="avatar" src="img/avatars/ava0.svg" alt="Avatar picture">
+                        <span class="username">Paolo Rossi</span>
+                    </div>
+                    <span class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, saepe. Ullam, architecto aut. Id, omnis quae labore perferendis aliquam fugiat, veniam amet sequi, quod quidem tempora recusandae inventore quos quam.</span>
+                </div>
+                <a class="btn" href="#comments-modal">View more comments</a>
+                <div id="comments-modal" class="modal-window">
+                    <div class="custom-scrollbar">
+                        <a href="#" title="Close" class="modal-close">&#215;</a>
+                        <div class="comment">
+                            <div class="user">
+                                <img class="avatar" src="img/avatars/ava0.svg" alt="Avatar picture">
+                                <span class="username">Paolo Rossi</span>
+                            </div>
+                            <span class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, saepe. Ullam, architecto aut. Id, omnis quae labore perferendis aliquam fugiat, veniam amet sequi, quod quidem tempora recusandae inventore quos quam.</span>
+                        </div>
+                        <div class="comment">
+                            <div class="user">
+                                <img class="avatar" src="img/avatars/ava0.svg" alt="Avatar picture">
+                                <span class="username">Paolo Rossi</span>
+                            </div>
+                            <span class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, saepe. Ullam, architecto aut. Id, omnis quae labore perferendis aliquam fugiat, veniam amet sequi, quod quidem tempora recusandae inventore quos quam.</span>
+                        </div>
+                        <div class="comment">
+                            <div class="user">
+                                <img class="avatar" src="img/avatars/ava0.svg" alt="Avatar picture">
+                                <span class="username">Paolo Rossi</span>
+                            </div>
+                            <span class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, saepe. Ullam, architecto aut. Id, omnis quae labore perferendis aliquam fugiat, veniam amet sequi, quod quidem tempora recusandae inventore quos quam.</span>
+                        </div>
+                        <div class="comment">
+                            <div class="user">
+                                <img class="avatar" src="img/avatars/ava0.svg" alt="Avatar picture">
+                                <span class="username">Paolo Rossi</span>
+                            </div>
+                            <span class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, saepe. Ullam, architecto aut. Id, omnis quae labore perferendis aliquam fugiat, veniam amet sequi, quod quidem tempora recusandae inventore quos quam.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            
         </div>
     </div>
     <script>
@@ -82,21 +153,13 @@
             accessToken: 'pk.eyJ1IjoiYWNvbml0dXMiLCJhIjoiY2trNGppencyMDFxNjJubzBwa3ZoMWw3eCJ9.q5TzubW0nKMfw1l0FPkMNw'
         }).addTo(map);
 
-        // map.on('click', () => {
-        //     console.log(map.getBounds());
-        // })
-        // map.on('dblclick', () => {
-        //     console.log(map.getCenter());
-        // })
-
         function showInfo(id)
         {
 
         }
 
         var marker = new L.Marker([46.225177, 10.930809], {id: 'ciao'}).on('click', e => {
-            //console.log(marker.options.id);
-            showInfo();
+            showInfo(marker.options.id);
         }).addTo(map);
 
     </script>
