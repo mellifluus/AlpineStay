@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
+:root {
+  --clr-green: #38d63a;
+  --clr-orange: #e39400;
+  --clr-red: #e12929;
+}
+
 *,
 ::before,
 ::after{
@@ -15,6 +21,18 @@ body{
 hr{
   clear: both;
 }
+
+.green{
+  color: var(--clr-green);
+}
+
+.orange{
+  color: var(--clr-orange);
+}
+
+.red{
+  color: var(--clr-red);
+} 
 
 .landing{
   min-height: 100vh;
@@ -46,10 +64,16 @@ hr{
 
 .biv-title{
   margin: 0.5rem 0rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .biv-title h3{
   color: gray;
+}
+
+.biv-title h2{
+  align-self: center;
 }
 
 .biv-thumb{
@@ -104,20 +128,39 @@ hr{
 
 .biv-services{
   margin-top: 2rem;
+  display: flex;
 }
 
 .services{
-  float: left;
-  width: 50%;
+  border: 2px solid rgba(0,0,0,0.1);
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  padding:1rem 1rem 1rem 0rem;
+  flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-row-gap: 10px;
+  margin-right: 5px;
 }
 
 .check-in{
-  float: right;
-  width: 50%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border: 2px solid rgba(0,0,0,0.1);
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.4);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-left: 5px;
+}
+
+.check-in span{
+  align-self: center;
+}
+
+.check-in .btn{
+  align-self: center;
 }
 
 .service{
@@ -146,7 +189,7 @@ hr{
   background:#2ee078;
   border-color:#2ee078 !important;
   transition: all 0.4s ease 0s;
-  }
+}
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
