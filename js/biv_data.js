@@ -14,7 +14,7 @@ var data =
             {
                 name: "Massimiliano Ricci",
                 avatar: 2,
-                text: "I've been here several times already. If you need a place to stay when hiking the dolomites, this is it!"
+                text: "I've been here several times already. If you need a place to sleep when hiking the dolomites, this is it!"
             },
             {
                 name: "Mimi Trentini",
@@ -55,9 +55,9 @@ var data =
         difficulty: 0,
         comments: [
             {
-                name: "Massimiliano Ricci",
-                avatar: 2,
-                text: "I've been here several times already. If you need a place to stay when hiking the dolomites, this is it!"
+                name: "Lorenzo Fortunato",
+                avatar: 5,
+                text: "This place is massive! We used some of the leftover pasta one of you left here, so we left some provisions for anyone who need them. :)"
             },
             {
                 name: "Mimi Trentini",

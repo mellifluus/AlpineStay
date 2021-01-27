@@ -25,15 +25,15 @@ function showInfo(biv, id)
         switch(i)
         {
             case 0:
-                gallery += `<div class="cssbox"> <a id="image0" href="#image0"> <img class="biv-thumb" src="img/${id}-0.jpg"> <span class="cssbox_full"> <img src="img/${id}-0.jpg"> </span> </a> <a class="cssbox_close" href="#void"></a> <a class="cssbox_next" href="#image1">&gt;</a> </div>`;
+                gallery += `<div class="cssbox"> <a id="image0" href="#image0"> <img class="biv-thumb" src="img/bivs/${id}-0.jpg"> <span class="cssbox_full"> <img src="img/bivs/${id}-0.jpg"> </span> </a> <a class="cssbox_close" href="#void"></a> <a class="cssbox_next" href="#image1">&gt;</a> </div>`;
                 break;
             
             case biv.images - 1:
-                gallery += `<div class="cssbox"> <a id="image${i}" href="#image${i}"> <span class="cssbox_full"> <img src="img/${id}-${i}.jpg"> </span> </a> <a class="cssbox_close" href="#void"></a> <a class="cssbox_prev" href="#image${i - 1}">&lt;</a> </div>`;
+                gallery += `<div class="cssbox"> <a id="image${i}" href="#image${i}"> <span class="cssbox_full"> <img src="img/bivs/${id}-${i}.jpg"> </span> </a> <a class="cssbox_close" href="#void"></a> <a class="cssbox_prev" href="#image${i - 1}">&lt;</a> </div>`;
                 break;
 
             default:
-                gallery += `<div class="cssbox"> <a id="image${i}" href="#image${i}"> <span class="cssbox_full"> <img src="img/${id}-${i}.jpg"> </span> </a> <a class="cssbox_close" href="#void"></a> <a class="cssbox_prev" href="#image${i - 1}">&lt;</a> <a class="cssbox_next" href="#image${i + 1}">&gt;</a> </div>`;
+                gallery += `<div class="cssbox"> <a id="image${i}" href="#image${i}"> <span class="cssbox_full"> <img src="img/bivs/${id}-${i}.jpg"> </span> </a> <a class="cssbox_close" href="#void"></a> <a class="cssbox_prev" href="#image${i - 1}">&lt;</a> <a class="cssbox_next" href="#image${i + 1}">&gt;</a> </div>`;
                 
         }
     }
@@ -150,6 +150,14 @@ function showInfo(biv, id)
     document.querySelector('.biv-wrapper').innerHTML = result;
 }
 
+var treeIcon = L.icon({
+    iconUrl: 'img/icons/tree.png',
+    // shadowUrl: 'leaf-shadow.png',
+
+    iconSize:     [40, 40],
+    iconAnchor:   [21, 38],
+});
+
 data.forEach((biv, ind) => {
-    new L.Marker([biv.lat, biv.long]).on('click', m => { showInfo(biv, ind) }).addTo(map);
+    new L.Marker([biv.lat, biv.long], {icon: treeIcon}).on('click', m => { showInfo(biv, ind) }).addTo(map);
 });

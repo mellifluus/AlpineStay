@@ -14,6 +14,11 @@
   padding: 0;
 }
 
+html{
+  /* font-size: 16px; */
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Quicksand', sans-serif;
 }
@@ -35,12 +40,110 @@ hr{
 } 
 
 .landing{
-  min-height: 100vh;
-  background: url("../img/placeholder.jpg");
+  height: 100vh;
+  color: white;
+  background: url("../img/landing_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  padding: 0rem 5rem;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  justify-items: center;
+}
+
+.landing-title{
+  font-size: 11em;
+  align-self: flex-end;
+}
+
+/* @media screen and (max-width: 890px) {
+  body {
+    font-size: 70%;
+  }
+} */
+
+.landing-subtitle{
+  font-size: 2em;
+}
+
+.about{
+  height: 75vh;
+  display: grid;
+  grid-template-rows: 2fr 2fr 0.5fr 1.5fr;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
   text-align: center;
 }
+
+.objective{
+  font-size: 5em;
+  font-weight: bold;
+  grid-column: 1 / 4;
+}
+
+.objective-lottie{
+  width: 15vw;
+  height: 15vw;
+}
+
+.about > span{
+  padding: 20px;
+}
+
+.goto-map{
+  height: 50vh;
+  background-color: #b8e986;
+}
+
+footer {
+  background-color: black;
+  display: table;
+  width: 100vw;
+  height: 8rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+footer small {
+  color: #ccc;
+  letter-spacing: .025rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.arrow{
+  align-self: center;
+  font-size: 3em;
+  display: inline-block;
+  position: relative; 
+  z-index: 1;
+}
+
+.arrow object{
+  width: 40px;
+  height: 40px;
+  position: relative; 
+  z-index: -1;
+}
+
+.landing .arrow object{
+  width: 50px;
+  height: 50px;
+  position: relative; 
+  z-index: -1;
+}
+
+
+
+
+
+
 
 .biv-wrapper{
   height: 100vh;
@@ -281,4 +384,11 @@ hr{
   top: 0;
   right: 0;
   z-index: 1;
+}
+
+.home{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }

@@ -6,10 +6,44 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 </head>
-<body>
-    <section class="landing">
-        <h1>Test</h1>
+<body class="no-scrollbar">
+    <section class="landing" id="landing">
+        <span class="landing-title">AlpineStay</span>
+        <span class="landing-subtitle">All the information you need about alpine refuges in Italy</span>
+        <a class="arrow" href="#landing">
+            <span>
+                <object data="img/icons/down-arrow.svg" type="image/svg+xml"></object>
+            </span>
+        </a>
+    </section>  
+    <section class="about" id="about">
+        <span class="objective">THE OBJECTIVE</span>
+        <lottie-player class="objective-lottie" src="lottie/hiker.json" background="transparent" speed="1.5" loop autoplay></lottie-player>
+        <lottie-player class="objective-lottie" src="lottie/broom.json" background="transparent" speed="1.5" loop autoplay></lottie-player>
+        <lottie-player class="objective-lottie" src="lottie/thumbsup.json" background="transparent" speed="0.7" loop autoplay></lottie-player>
+        <h1>Unite outdoors lovers</h1>
+        <h1>Tidy up infos and laws</h1>
+        <h1>Get more people into hiking</h1>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt obcaecati labore qui, reprehenderit tempore aperiam maxime dolorem, soluta corporis eaque aliquid sint placeat dolore. Quaerat expedita voluptatem nam atque dolorem?</span>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt obcaecati labore qui, reprehenderit tempore aperiam maxime dolorem, soluta corporis eaque aliquid sint placeat dolore. Quaerat expedita voluptatem nam atque dolorem?</span>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt obcaecati labore qui, reprehenderit tempore aperiam maxime dolorem, soluta corporis eaque aliquid sint placeat dolore. Quaerat expedita voluptatem nam atque dolorem?</span>
     </section>
+    <section class="goto-map">
+
+    </section>
+    <footer>
+        <div class="footer-wrapper">
+            <small>&copy;2021 Made with <span style="color: #e25555;">&#9829;</span> by Massimiliano Ricci</small>
+            <i></i>
+            <a class="arrow" href="#landing">
+                <span>
+                    <object data="img/icons/up-arrow.svg" type="image/svg+xml"></object>
+                </span>
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
