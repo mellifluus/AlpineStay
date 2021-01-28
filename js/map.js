@@ -1,3 +1,8 @@
+var bivDiv = document.querySelector('.biv-wrapper');
+var bivs = [];
+
+//Map instantiation
+
 var map = L.map('map', {
     center: [42.550651, 12.105600],
     zoom: 6.2,
@@ -15,7 +20,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiYWNvbml0dXMiLCJhIjoiY2trNGppencyMDFxNjJubzBwa3ZoMWw3eCJ9.q5TzubW0nKMfw1l0FPkMNw'
 }).addTo(map);
 
-function showInfo(biv, id)
+//Store and show biv functions
+
+function bivInfo(biv, id)
 {
     var open = biv.open ? '<h2 class="green">Open!</h2>' : '<h2 class="red">Closed</h2>';
     
@@ -147,17 +154,26 @@ function showInfo(biv, id)
         </div>
     </div>`
     
-    document.querySelector('.biv-wrapper').innerHTML = result;
+    bivs.push(result);
 }
+
+function showBiv(ind){
+    bivDiv.innerHTML = bivs[ind];
+    bivDiv.scrollTop = 0;
+}
+
+//Define map marker style
 
 var treeIcon = L.icon({
     iconUrl: 'img/icons/tree.png',
-    // shadowUrl: 'leaf-shadow.png',
-
     iconSize:     [40, 40],
     iconAnchor:   [21, 38],
 });
 
-data.forEach((biv, ind) => {
-    new L.Marker([biv.lat, biv.long], {icon: treeIcon}).on('click', m => { showInfo(biv, ind) }).addTo(map);
-});
+//Add markers to map
+
+data.forEach((biv, ind) => new L.Marker([biv.lat, biv.long], {icon: treeIcon}).on('click', m =>  showBiv(ind)).addTo(map));
+
+//Store bivs html in array
+
+data.forEach((biv, ind) => bivInfo(biv, ind));

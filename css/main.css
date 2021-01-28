@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+:root {
+  --clr-leaf: #8eb467;
+}
+
+*,
+::before,
+::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Quicksand', sans-serif;
+  color:#fff;
+}
+
+hr{
+  clear: both;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.landing{
+  height: 100vh;
+  background: url("../img/landing_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  justify-items: center;
+}
+
+.landing-title{
+  font-size: 11rem;
+  align-self: flex-end;
+}
+
+.landing-subtitle{
+  font-size: 2rem;
+}
+
+.about{
+  color: black;
+  display: grid;
+  grid-template-rows: 2fr 2fr 0.5fr 1.5fr;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.objective{
+  font-size: 5rem;
+  font-weight: bold;
+  grid-column: 1 / 4;
+}
+
+.objective-lottie{
+  width: 15vw;
+  height: 15vw;
+}
+
+.about > span:not(.objective){
+  padding: 20px 80px;
+  font-size: 1.2rem;
+}
+
+.goto-map{
+  height: 50vh;
+  background: url("../img/biv_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  background-color: black;
+  display: table;
+  width: 100vw;
+  height: 8rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+footer small {
+  color: #ccc;
+  letter-spacing: .025rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.arrow{
+  align-self: center;
+  font-size: 3rem;
+  display: inline-block;
+  position: relative; 
+  z-index: 1;
+}
+
+.arrow object{
+  width: 40px;
+  height: 40px;
+  position: relative; 
+  z-index: -1;
+}
+
+.landing .arrow object{
+  width: 50px;
+  height: 50px;
+  position: relative; 
+  z-index: -1;
+}
+
+.cta-btn{
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px;
+  border: 2px solid #fff !important;
+  border-radius: 5px;
+}
+
+.cta-btn:hover {
+  color: #ffffff !important;
+  background: var(--clr-leaf);
+  border-color:var(--clr-leaf) !important;
+  transition: all 0.4s ease 0s;
+}
+
+.cta-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 20vw;
+}
+
+.cta-info span{
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* @media screen and (max-width: 890px) {
+  body {
+    font-size: 70%;
+  }
+} */

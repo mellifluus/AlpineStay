@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
 :root {
-  --clr-green: #38d63a;
-  --clr-orange: #e39400;
-  --clr-red: #e12929;
+    --clr-green: #38d63a;
+    --clr-orange: #e39400;
+    --clr-red: #e12929;
 }
 
 *,
@@ -14,15 +14,10 @@
   padding: 0;
 }
 
-html{
-  /* font-size: 16px; */
-  scroll-behavior: smooth;
-}
-
 body{
   font-family: 'Quicksand', sans-serif;
 }
-
+  
 hr{
   clear: both;
 }
@@ -37,145 +32,7 @@ hr{
 
 .red{
   color: var(--clr-red);
-} 
-
-.landing{
-  height: 100vh;
-  color: white;
-  background: url("../img/landing_bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
-  justify-items: center;
 }
-
-.landing-title{
-  font-size: 11em;
-  align-self: flex-end;
-}
-
-/* @media screen and (max-width: 890px) {
-  body {
-    font-size: 70%;
-  }
-} */
-
-.landing-subtitle{
-  font-size: 2em;
-}
-
-.about{
-  display: grid;
-  grid-template-rows: 2fr 2fr 0.5fr 1.5fr;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  justify-items: center;
-  text-align: center;
-}
-
-.objective{
-  font-size: 5em;
-  font-weight: bold;
-  grid-column: 1 / 4;
-}
-
-.objective-lottie{
-  width: 15vw;
-  height: 15vw;
-}
-
-.about > span:not(.objective){
-  padding: 20px 80px;
-  font-size: 1.2em;
-}
-
-.goto-map{
-  height: 50vh;
-  color: white;
-  background: url("../img/biv_bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-}
-
-footer {
-  background-color: black;
-  display: table;
-  width: 100vw;
-  height: 8rem;
-  text-align: center;
-  padding: 1rem;
-}
-
-.footer-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-footer small {
-  color: #ccc;
-  letter-spacing: .025rem;
-  margin-bottom: 1.5rem;
-  display: block;
-}
-
-.arrow{
-  align-self: center;
-  font-size: 3em;
-  display: inline-block;
-  position: relative; 
-  z-index: 1;
-}
-
-.arrow object{
-  width: 40px;
-  height: 40px;
-  position: relative; 
-  z-index: -1;
-}
-
-.landing .arrow object{
-  width: 50px;
-  height: 50px;
-  position: relative; 
-  z-index: -1;
-}
-
-.cta-btn{
-  color: #fff !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 20px;
-  border: 2px solid #fff !important;
-  border-radius: 5px;
-}
-
-.cta-btn:hover {
-  color: #ffffff !important;
-  background:#8eb467;
-  border-color:#8eb467 !important;
-  transition: all 0.4s ease 0s;
-}
-
-.cta-info{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-left: 20vw;
-}
-
-.cta-info span{
-  font-size: 1.2em;
-  text-align: center;
-  margin-bottom: 2em;
-}
-
-
 
 .biv-wrapper{
   height: 100vh;
@@ -184,7 +41,7 @@ footer small {
   background-color: #ffffff;
   overflow-y: auto;
 }
-
+  
 .get-started{
   display: flex;
   flex-direction: column;
@@ -335,22 +192,19 @@ footer small {
   scrollbar-width: none;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+.custom-scrollbar::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
 }
 
-.custom-scrollbar::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: #F5F5F5;
+.custom-scrollbar::-webkit-scrollbar{
+  width: 6px;
+  background-color: #F5F5F5;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #555;
+.custom-scrollbar::-webkit-scrollbar-thumb{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #555;
 }
 
 .modal-window {
@@ -423,4 +277,9 @@ footer small {
   top: 0;
   right: 0;
   z-index: 2;
+}
+
+.home img{
+  width: 40px;
+  height: 40px;
 }
