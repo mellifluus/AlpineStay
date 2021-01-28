@@ -1,5 +1,9 @@
 var bivDiv = document.querySelector('.biv-wrapper');
+var loadingscreen = document.querySelector('.loading-screen');
 var bivs = [];
+var animating = false;
+var currentBiv = -1;
+var wait = false;
 
 //Map instantiation
 
@@ -32,7 +36,7 @@ function bivInfo(biv, id)
         switch(i)
         {
             case 0:
-                gallery += `<div class="cssbox"> <a id="image0" href="#image0"> <img class="biv-thumb" src="img/bivs/${id}-0.jpg"> <span class="cssbox_full"> <img src="img/bivs/${id}-0.jpg"> </span> </a> <a class="cssbox_close" href="#void"></a> <a class="cssbox_next" href="#image1">&gt;</a> </div>`;
+                gallery += `<div class="cssbox"> <a id="image0" href="#image0"> <img class="biv-thumb" src="img/bivs/${id}-0.jpg" onload="imgLoaded = true;"> <span class="cssbox_full"> <img src="img/bivs/${id}-0.jpg"> </span> </a> <a class="cssbox_close" href="#void"></a> <a class="cssbox_next" href="#image1">&gt;</a> </div>`;
                 break;
             
             case biv.images - 1:
@@ -157,9 +161,44 @@ function bivInfo(biv, id)
     bivs.push(result);
 }
 
-function showBiv(ind){
-    bivDiv.innerHTML = bivs[ind];
-    bivDiv.scrollTop = 0;
+async function showBiv(ind){
+    if(!animating && ind !== currentBiv){
+        animating = true;
+        var promise = Promise.resolve();
+
+        promise.then(() => {
+            return new Promise(resolve => { 
+                gsap.to(loadingscreen, {
+                    duration: 0.8, 
+                    height: "100%", 
+                    top: "0%", 
+                    ease: "Expo.easeInOut", 
+                    onComplete: resolve 
+                })
+            })
+        })
+        .then(() => {
+            return new Promise(resolve => {
+                bivDiv.innerHTML = bivs[ind];
+                bivDiv.scrollTop = 0;
+                loadingscreen.style.removeProperty('top');
+                gsap.to(loadingscreen, {
+                    delay: 0.8,
+                    duration: 0.6,
+                    height: "0%",
+                    bottom: "0%",
+                    ease: "Expo.easeInOut",
+                    onComplete: resolve
+                });
+            })
+        })
+        .then(() => {
+            loadingscreen.style.removeProperty('bottom');
+            currentBiv = ind;
+            animating = false;
+        });
+    }
+    
 }
 
 //Define map marker style
@@ -177,3 +216,9 @@ data.forEach((biv, ind) => new L.Marker([biv.lat, biv.long], {icon: treeIcon}).o
 //Store bivs html in array
 
 data.forEach((biv, ind) => bivInfo(biv, ind));
+
+gsap.from('.get-started', {
+    y: -50,
+    opacity: 0,
+    duration: 1,
+});

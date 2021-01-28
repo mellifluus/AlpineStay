@@ -4,6 +4,7 @@
     --clr-green: #38d63a;
     --clr-orange: #e39400;
     --clr-red: #e12929;
+    --clr-leaf: #8eb467;
 }
 
 *,
@@ -282,4 +283,25 @@ hr{
 .home img{
   width: 40px;
   height: 40px;
+}
+
+.loading-screen{
+  position: absolute;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  width: 100%;
+  height: 0%;
+  background-color: var(--clr-leaf);
+}
+
+.load-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
 }

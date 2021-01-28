@@ -11,9 +11,9 @@
 </head>
 <body class="no-scrollbar">
     <section class="landing" id="landing">
-        <span class="landing-title">AlpineStay</span>
-        <span class="landing-subtitle">All the information you need about alpine refuges in Italy</span>
-        <a class="arrow" href="#about">
+        <span class="landing-title anim-landing">AlpineStay</span>
+        <span class="landing-subtitle anim-landing">All the information you need about alpine refuges in Italy</span>
+        <a class="arrow anim-landing" href="#about">
             <span>
                 <object data="img/icons/down-arrow.svg" type="image/svg+xml"></object>
             </span>
@@ -21,20 +21,20 @@
     </section>  
     <section class="about" id="about">
         <span class="objective">MY OBJECTIVES</span>
-        <lottie-player class="objective-lottie" src="lottie/hiker.json" background="transparent" speed="1" loop autoplay></lottie-player>
-        <lottie-player class="objective-lottie" src="lottie/broom.json" background="transparent" speed="1.5" loop autoplay></lottie-player>
-        <lottie-player class="objective-lottie" src="lottie/thumbsup.json" background="transparent" speed="0.7" loop autoplay></lottie-player>
-        <h1>Unite outdoors lovers</h1>
-        <h1>Tidy up infos and laws</h1>
-        <h1>Get more people into hiking</h1>
-        <span>Drawing together like-minded people, forming a community of nature lovers where everyone will be able to share their experiences.</span>
-        <span>Bringing order to the chaotic Italian legislations regarding wilderness, making clear what can and what can't be done in each region.</span>
-        <span>Attracting newcomers to the hiking world by having experienced walkers giving advice and tips suitable for beginners.</span>
+        <lottie-player class="objective-lottie anim-item1" src="lottie/hiker.json" background="transparent" speed="1" loop autoplay></lottie-player>
+        <lottie-player class="objective-lottie anim-item2" src="lottie/broom.json" background="transparent" speed="1.5" loop autoplay></lottie-player>
+        <lottie-player class="objective-lottie anim-item3" src="lottie/thumbsup.json" background="transparent" speed="0.7" loop autoplay></lottie-player>
+        <h1 class="anim-item1">Unite outdoors lovers</h1>
+        <h1 class="anim-item2">Tidy up infos and laws</h1>
+        <h1 class="anim-item3">Get more people into hiking</h1>
+        <span class="anim-item1">Drawing together like-minded people, forming a community of nature lovers where everyone will be able to share their experiences.</span>
+        <span class="anim-item2">Bringing order to the chaotic Italian legislations regarding wilderness, making clear what can and what can't be done in each region.</span>
+        <span class="anim-item3">Attracting newcomers to the hiking world by having experienced walkers giving advice and tips suitable for beginners.</span>
     </section>
     <section class="goto-map">
         <div class="cta-info">
-            <span>Check all the info you need <br> on the interactive map!</span>
-            <a href="map.html" class="cta-btn">go to map</a>
+            <span class="cta-anim">Check all the info you need <br> on the interactive map!</span>
+            <a href="map.html" class="cta-btn cta-anim">go to map</a>
         </div>
     </section>
     <footer>
@@ -47,8 +47,81 @@
             </a>
         </div>
     </footer>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 </body>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+<script>
+
+    //
+    //ANIMATIONS
+    //
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    //LANDING
+
+    gsap.from('.anim-landing', {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.6
+    });
+
+    //ABOUT
+
+    gsap.from('.objective', {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: '.objective',
+        }
+    });
+
+    var about_anim = [document.querySelectorAll('.anim-item1'), document.querySelectorAll('.anim-item2'), document.querySelectorAll('.anim-item3')];
+
+    gsap.from(about_anim, {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        scrollTrigger:{
+            trigger: '.objective-lottie',
+        }
+    });
+
+    //CTA
+
+    gsap.from('.cta-anim', {
+        x: -50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.5,
+        scrollTrigger:{
+            trigger: '.cta-btn',
+        }
+    });
+
+    // function pageTransition() {
+    //     var tl = gsap.timeline();
+
+    //     tl.to('.loading-screen', {
+    //         duration: 1.2,
+    //         width: "100%",
+    //         left: "0%",
+    //         ease: "Expo.easeInOut"
+    //     });
+
+    //     tl.to('.loading-screen', {
+    //         duration: 1,
+    //         width: "100%",
+    //         left: "100%",
+    //         ease: "Expo.easeInOut",
+    //         delay: .3
+    //     });
+
+    //     tl.set('.loading-screen', { left: "-100%" });
+    // }
+</script>
 </html>
