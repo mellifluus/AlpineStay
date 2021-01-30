@@ -68,7 +68,7 @@ function bivInfo(biv, id)
     var comments = '';
     biv.comments.forEach((comment, i) => {
         if(i !== 0)
-            comments += `<div class="comment"> <div class="user"> <img class="avatar" src="img/avatars/ava${comment.avatar}.svg" alt="Avatar picture"> <span class="username">${comment.name}</span> </div><span class="comment-text">${comment.text !== '' ? comment.text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ea accusamus error. Molestias, perspiciatis ipsam? Ab aut tenetur minima numquam, vitae obcaecati repellendus itaque voluptatum illo nesciunt doloremque consequuntur ullam.'}</span> </div>`;
+            comments += `<div class="comment"> <div class="user"> <img class="avatar" src="img/avatars/ava${comment.avatar}.svg" alt="Avatar picture"> <span class="username">${comment.name}</span> </div><span class="comment-text">${comment.text !== 'lorem' ? comment.text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ea accusamus error. Molestias, perspiciatis ipsam? Ab aut tenetur minima numquam, vitae obcaecati repellendus itaque voluptatum illo nesciunt doloremque consequuntur ullam.'}</span> </div>`;
     });
 
     var busy;
@@ -183,7 +183,7 @@ async function showBiv(ind){
                 bivDiv.scrollTop = 0;
                 loadingscreen.style.removeProperty('top');
                 gsap.to(loadingscreen, {
-                    delay: 0.8,
+                    delay: 0.5,
                     duration: 0.6,
                     height: "0%",
                     bottom: "0%",

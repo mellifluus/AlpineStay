@@ -166,8 +166,8 @@ footer small {
   margin-bottom: 2rem;
 }
 
-/* @media screen and (max-width: 890px) {
-  body {
-    font-size: 70%;
+@media screen and (max-width: 890px) {
+  html {
+    font-size: 10px;
   }
-} */
+}
