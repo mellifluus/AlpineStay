@@ -232,18 +232,150 @@ var data =
             {
                 name: "Giulia Razzi",
                 avatar: 1,
-                text: "lorem"
+                text: "The trail to get here is pretty easy, suitable for families with kids."
             },
             {
                 name: "Alberto Paniere",
                 avatar: 5,
-                text: "lorem"
+                text: "This area is pretty boring during fall and winter, but gets beautiful in spring when all of the flowers start blooming."
+            },
+            {
+                name: "Carlotta Recchia",
+                avatar: 4,
+                text: "The refuge is not really big, but can fit 5 to 6 people if you get crammed up a bit."
             }
         ],
         water: true,
         current: false,
         beds: false,
         heater: false,
+        busy: 1
+    },
+    {
+        lat: 42.468810,
+        long: 13.573304,
+        name: "Bivacco Bafile Andrea",
+        location: "Gran Sasso, Abruzzo",
+        open: true,
+        images: 3,
+        directions: "From Campo Imperatore follow the directions to Sella di Monte Aquila. Then take the via ferrata until you reach the hut.",
+        time: "~2.5 hrs",
+        difficulty: 2,
+        comments: [
+            {
+                name: "Alessia Corbetta",
+                avatar: 1,
+                text: "I found this refuge to be really dirty. Remember to clean up after you sleep in a mountain hut! There's almost always a broom available."
+            },
+            {
+                name: "Marco Bonadonna",
+                avatar: 0,
+                text: "The views from the plane where this hut's located are absolutely breathtaking. Worth the effort of the climb."
+            }
+        ],
+        water: true,
+        current: false,
+        beds: true,
+        heater: false,
+        busy: 0
+    },
+    {
+        lat: 42.115534,
+        long: 14.121389,
+        name: "Bivacco Carlo Fusco",
+        location: "Parco della Majella, Abruzzo",
+        open: false,
+        images: 3,
+        directions: "Start coasting the Blockhaus through trail #1, until reaching Sella Acquaviva. Start climbing Monte Focalone but, when reaching a crossroad, follow the directions to Fusco.",
+        time: "~2.5 hrs",
+        difficulty: 1,
+        comments: [
+            {
+                name: "Mario Cosentini",
+                avatar: 5,
+                text: "This bright yellow refuge is only pretty from the outside. :) The views are amazing, though."
+            },
+            {
+                name: "Francesca Ariardi",
+                avatar: 3,
+                text: "I slept there a week ago, but some people told me that this will soon be temporarily closed because of COVID."
+            },
+            {
+                name: "Paola Zampini",
+                avatar: 1,
+                text: "I spent the night here with my husband. We woke up to a chamois right outside the door!"
+            }
+        ],
+        water: false,
+        current: false,
+        beds: false,
+        heater: false,
+        busy: 1
+    },
+    {
+        lat: 40.287217,
+        long: 15.496050,
+        name: "Bivacco Cervati",
+        location: "Monte Cervati, Campania",
+        open: true,
+        images: 3,
+        directions: "From rifugio di Vallescura, simply follow the directions to Rifugio Cervati.",
+        time: "~0.5 hrs",
+        difficulty: 0,
+        comments: [
+            {
+                name: "Ciro Salentani",
+                avatar: 6,
+                text: "A fully equipped refuge. It has a small solar panel that provides power for some light but not much more."
+            },
+            {
+                name: "Patrizia Tambani",
+                avatar: 4,
+                text: "This is a real spacious and fully equipped mountain hut. That's probably because it's an easier to reach one."
+            }
+        ],
+        water: true,
+        current: true,
+        beds: true,
+        heater: true,
+        busy: 2
+    },
+    {
+        lat: 37.902796,
+        long: 14.068791,
+        name: "Bivacco Crispi Francesco",
+        location: "Parco Regionale delle Madonie, Sicilia",
+        open: false,
+        images: 2,
+        directions: "Starting from Castelbuono, follow the directions to localita' San Guglielmo. From there, follow the directions to Bivacco Crispi.",
+        time: "~3.5 hrs",
+        difficulty: 1,
+        comments: [
+            {
+                name: "Alessandro Paloma",
+                avatar: 2,
+                text: "Really pretty but small refuge in the middle of the parco Regionale delle Madonie. Remember to sign the hut book before leaving!"
+            },
+            {
+                name: "Stefano Ceradini",
+                avatar: 6,
+                text: "I took a photo of a marmot trying to get in there to steal some food. :)"
+            },
+            {
+                name: "Elena Marongiu",
+                avatar: 3,
+                text: "Don't expect a lot from this one. Yes it has beds but they're really dirty so I suggest you bring at least a sleeping bag liner with you."
+            },
+            {
+                name: "Marta Geccherle",
+                avatar: 1,
+                text: "The refuge is near a lot of very pretty trails and near the beautiful lake of Morie."
+            }
+        ],
+        water: true,
+        current: false,
+        beds: true,
+        heater: true,
         busy: 1
     }
 ]
