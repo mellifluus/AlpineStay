@@ -1,4 +1,4 @@
-#AlpineStay
+# AlpineStay
 
 This repository hosts all the history of my CODE challenge submission.
 
